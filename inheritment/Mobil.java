@@ -1,14 +1,21 @@
-class Mobil extends Kendaraan {
-    int jumlahPintu;
+public class Mobil extends Kendaraan {
+    private int jumlahPintu;
 
-    // Constructor
-    public Mobil(String merk, int tahun, int jumlahPintu) {
-        super(merk, tahun); // memanggil constructor dari class induk
+    public Mobil(String nama, int kecepatan, int jumlahPintu) {
+        super(nama, kecepatan);
+        this.jumlahPintu = jumlahPintu;
+    }
+
+    public int getJumlahPintu() {
+        return jumlahPintu;
+    }
+
+    public void setJumlahPintu(int jumlahPintu) {
         this.jumlahPintu = jumlahPintu;
     }
 
     public void info() {
-        super.info(); // memanggil method dari class induk
-        System.out.println("Jumlah Pintu: " + jumlahPintu);
+        System.out.println("Mobil: " + getNama() + ", Pintu: " + jumlahPintu +
+                           ", Kecepatan: " + getKecepatan() + " km/jam");
     }
 }

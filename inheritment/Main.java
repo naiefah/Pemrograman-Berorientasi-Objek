@@ -1,12 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        Mobil mobil1 = new Mobil("Toyota", 2020, 4);
-        Motor motor1 = new Motor("Honda", 2018, true);
+        // Single Inheritance
+        Mobil m1 = new Mobil("Avanza", 120, 4);
+        m1.info();
 
-        System.out.println("=== Info Mobil ===");
-        mobil1.info();
+        // Multilevel + Hybrid
+        MobilSport ms = new MobilSport("Ferrari", 300, 2, true);
+        ms.info();
+        ms.service();
 
-        System.out.println("\n=== Info Motor ===");
+        // Hierarchical
+        Motor motor1 = new Motor("Vario", 90, "Full Face");
         motor1.info();
     }
 }

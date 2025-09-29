@@ -1,16 +1,31 @@
-class Kendaraan {
-    String merk;
-    int tahun;
+public class Kendaraan {
+    protected String nama; // protected bisa diakses oleh subclass
+    private int kecepatan; // encapsulation (hanya setter & getter)
 
-    // Constructor
-    public Kendaraan(String merk, int tahun) {
-        this.merk = merk;
-        this.tahun = tahun;
+    public Kendaraan(String nama, int kecepatan) {
+        this.nama = nama;
+        this.kecepatan = kecepatan;
     }
 
-    // Method
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public int getKecepatan() {
+        return kecepatan;
+    }
+
+    public void setKecepatan(int kecepatan) {
+        if (kecepatan >= 0) {
+            this.kecepatan = kecepatan;
+        }
+    }
+
     public void info() {
-        System.out.println("Merk: " + merk);
-        System.out.println("Tahun: " + tahun);
+        System.out.println("Kendaraan: " + nama + ", Kecepatan: " + kecepatan + " km/jam");
     }
 }
