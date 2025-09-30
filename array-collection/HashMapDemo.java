@@ -6,12 +6,12 @@ public class HashMapDemo {
         HashMap<String, Integer> nilaiMahasiswa = new HashMap<>();
 
         // Menambahkan data ke HashMap
-        nilaiMahasiswa.put("Andi", 85);
-        nilaiMahasiswa.put("Budi", 90);
-        nilaiMahasiswa.put("Citra", 78);
+        nilaiMahasiswa.put("Naiefah", 85);
+        nilaiMahasiswa.put("Syalfian", 90);
+        nilaiMahasiswa.put("Fawwaztiyani", 78);
 
         // Mengakses data berdasarkan key
-        System.out.println("Nilai Budi: " + nilaiMahasiswa.get("Budi"));
+        System.out.println("Nilai Naiefah: " + nilaiMahasiswa.get("Naiefah"));
 
         // Menampilkan semua key dan value
         System.out.println("Daftar Nilai Mahasiswa:");
@@ -20,8 +20,8 @@ public class HashMapDemo {
         }
 
         // Menghapus data
-        nilaiMahasiswa.remove("Citra");
-        System.out.println("\nSetelah menghapus Citra:");
+        nilaiMahasiswa.remove("Syalfian");
+        System.out.println("\nSetelah menghapus Syalfian:");
         System.out.println(nilaiMahasiswa);
     }
 }
